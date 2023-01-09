@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
+      "Id": "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/wwwroot/credentials.json",
+      "PackagePath": "staticwebassets/credentials.json"
+    },
+    {
+      "Id": "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/wwwroot/images/.DS_Store",
+      "PackagePath": "staticwebassets/images/.DS_Store"
+    },
+    {
+      "Id": "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/wwwroot/images/Banner.jpeg",
+      "PackagePath": "staticwebassets/images/Banner.jpeg"
+    },
+    {
+      "Id": "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/wwwroot/images/DEE7BD95-5C4E-499A-AEEC-A731AB142070.jpg",
+      "PackagePath": "staticwebassets/images/DEE7BD95-5C4E-499A-AEEC-A731AB142070.jpg"
+    },
+    {
+      "Id": "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/wwwroot/images/FEBB8849-73EC-4792-81D7-301FEC7A91F5.jpg",
+      "PackagePath": "staticwebassets/images/FEBB8849-73EC-4792-81D7-301FEC7A91F5.jpg"
+    },
+    {
+      "Id": "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/wwwroot/images/_.jpeg",
+      "PackagePath": "staticwebassets/images/_.jpeg"
+    },
+    {
+      "Id": "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/wwwroot/images/g r e e n \uD83D\uDEE3에 있는 stephaniè님의 핀 - 2022 _ 자연 사진, 풍경 배경화면, 자연.jpeg",
+      "PackagePath": "staticwebassets/images/g r e e n \uD83D\uDEE3에 있는 stephaniè님의 핀 - 2022 _ 자연 사진, 풍경 배경화면, 자연.jpeg"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.TheBlogAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.build.TheBlogAPI.props",
+      "PackagePath": "build\\TheBlogAPI.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.TheBlogAPI.props",
+      "PackagePath": "buildMultiTargeting\\TheBlogAPI.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.TheBlogAPI.props",
+      "PackagePath": "buildTransitive\\TheBlogAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

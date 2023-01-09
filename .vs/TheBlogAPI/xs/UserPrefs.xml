@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{914DC11F-BBEA-44FD-A619-24EF69E44D66}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheBlogAPI/Repository/VocabRepository.cs">
+    <Files>
+      <File FileName="TheBlogAPI/Services/QuizService.cs" Line="40" Column="19" />
+      <File FileName="TheBlogAPI/Controllers/VocabularyController.cs" Line="69" Column="39" />
+      <File FileName="TheBlogAPI/Services/VocabService.cs" Line="56" Column="33" />
+      <File FileName="TheBlogAPI/Interface/IVocabRepository.cs" Line="13" Column="24" />
+      <File FileName="TheBlogAPI/Repository/VocabRepository.cs" Line="164" Column="57" />
+      <File FileName="TheBlogAPI/Models/DTO/QuizDTO.cs" Line="14" Column="39" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TheBlogAPI" expanded="True">
+            <Node name="TheBlogAPI" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Interface" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="DTO" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Repository" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.TheBlogAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
