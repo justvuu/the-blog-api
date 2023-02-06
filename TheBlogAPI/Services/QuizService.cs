@@ -23,10 +23,10 @@ namespace TheBlogAPI.Services
 		{
 			Random rnd = new Random();
 			List<QuizDTO> quizzes = new List<QuizDTO>();
-			List<Vocabulary> vocabularies = (List<Vocabulary>)vocabService.GetAll();
+			List<Vocab> vocabularies = (List<Vocab>)vocabService.GetAll();
 			vocabularies = vocabularies.OrderBy(x => rnd.Next()).Take(80).ToList();
-			List<Vocabulary> selectedWords = vocabularies.Take(20).ToList();
-			List<Vocabulary> ansWords = vocabularies.GetRange(19, 60).ToList();
+			List<Vocab> selectedWords = vocabularies.Take(20).ToList();
+			List<Vocab> ansWords = vocabularies.GetRange(19, 60).ToList();
 
 			List<string> quizType = new List<string>()
 			{

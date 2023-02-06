@@ -19,26 +19,26 @@ namespace TheBlogAPI.Services
 			repository = new VocabRepository(dbContext);
         }
 
-        public ICollection<Vocabulary> GetAll() => repository.GetAll();
+        public ICollection<Vocab> GetAll() => repository.GetAll();
 
-        public Vocabulary GetVocabById(Guid id)
+        public Vocab GetVocabById(Guid id)
         {
             return repository.GetVocabById(id);
         }
 
-        public ICollection<Vocabulary> GetVocabByWord(string word)
+        public ICollection<Vocab> GetVocabByWord(string word)
         {
             return repository.GetVocabByWord(word);
         }
 
-        public bool CreateVocab(AddVocabDTO addVocabDTO)
+        public bool CreateVocab(CreateVocabDTO createVocabDTO)
         {
-            return repository.CreateVocab(addVocabDTO);
+            return repository.CreateVocab(createVocabDTO);
         }
 
-        public bool UpdateVocab(Vocabulary vocab, EditVocabDTO editVocabDTO)
+        public bool UpdateVocab(Vocab vocab, UpdateVocabDTO updateVocabDTO)
         {
-            return repository.UpdateVocab(vocab, editVocabDTO);
+            return repository.UpdateVocab(vocab, updateVocabDTO);
         }
 
         public bool DeleteVocab(Guid vocabId)
@@ -46,9 +46,9 @@ namespace TheBlogAPI.Services
             return repository.DeleteVocab(vocabId);
         }
 
-        public ICollection<Vocabulary> GetVocabByCateId(Guid id)
+        public ICollection<Vocab> GetVocabBySetId(Guid id)
         {
-            return repository.GetVocabByCateId(id);
+            return repository.GetVocabBySetId(id);
         }
 
         public ICollection<QuizDTO> GetQuiz()

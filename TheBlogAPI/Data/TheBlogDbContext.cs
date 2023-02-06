@@ -11,15 +11,10 @@ namespace TheBlogAPI.Data
 
         }
 
-        public DbSet<Post> Posts { get; set; }
-
-        public DbSet<Category> Categories { set; get; }
-
-        public DbSet<User> Users { get; set; }
-
-        public DbSet<Vocabulary> Vocabulary { get; set; }
-
-        public DbSet<VocabCategory> VocabCategory { get; set; }
+        public DbSet<Vocab> Vocab { get; set; }
+        public DbSet<Article> Article { get; set; }
+        public DbSet<Category> Category { set; get; }
+        public DbSet<VocabSet> VocabSet { get; set; }
     }
 }
 

@@ -1,30 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/TheBlogAPI.csproj": {}
+    "D:\\VU\\the-blog-api\\TheBlogAPI\\TheBlogAPI.csproj": {}
   },
   "projects": {
-    "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/TheBlogAPI.csproj": {
+    "D:\\VU\\the-blog-api\\TheBlogAPI\\TheBlogAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/TheBlogAPI.csproj",
+        "projectUniqueName": "D:\\VU\\the-blog-api\\TheBlogAPI\\TheBlogAPI.csproj",
         "projectName": "TheBlogAPI",
-        "projectPath": "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/TheBlogAPI.csproj",
-        "packagesPath": "/Users/tuanvu2218/.nuget/packages/",
-        "outputPath": "/Users/tuanvu2218/Projects/TheBlogAPI/TheBlogAPI/obj/",
+        "projectPath": "D:\\VU\\the-blog-api\\TheBlogAPI\\TheBlogAPI.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\VU\\the-blog-api\\TheBlogAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/tuanvu2218/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -35,12 +37,20 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Google.Apis.Calendar.v3": {
               "target": "Package",
               "version": "[1.58.0.2759, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -55,6 +65,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.26.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -84,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

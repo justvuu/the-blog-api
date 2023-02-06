@@ -22,32 +22,13 @@ namespace TheBlogAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("TheBlogAPI.Models.Entities.Category", b =>
+            modelBuilder.Entity("TheBlogAPI.Models.Entities.Article", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UrlHandle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("TheBlogAPI.Models.Entities.Post", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("AuthorId")
+                    b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Content")
@@ -58,15 +39,12 @@ namespace TheBlogAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Like")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Path")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("PublishDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Summary")
                         .IsRequired()
@@ -84,68 +62,34 @@ namespace TheBlogAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AuthorId");
+                    b.HasIndex("CategoryId");
 
-                    b.ToTable("Posts");
+                    b.ToTable("Article");
                 });
 
-            modelBuilder.Entity("TheBlogAPI.Models.Entities.User", b =>
+            modelBuilder.Entity("TheBlogAPI.Models.Entities.Category", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Avatar")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Username")
+                    b.Property<string>("Slug")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Category");
                 });
 
-            modelBuilder.Entity("TheBlogAPI.Models.Entities.VocabCategory", b =>
+            modelBuilder.Entity("TheBlogAPI.Models.Entities.Vocab", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Nickname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("OpenTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("RecentlyTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Times")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("VocabCategory");
-                });
-
-            modelBuilder.Entity("TheBlogAPI.Models.Entities.Vocabulary", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("EN")
@@ -162,6 +106,9 @@ namespace TheBlogAPI.Migrations
                     b.Property<string>("Pronunciation")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("SetId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Sound")
                         .HasColumnType("nvarchar(max)");
 
@@ -175,18 +122,39 @@ namespace TheBlogAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Vocabulary");
+                    b.ToTable("Vocab");
                 });
 
-            modelBuilder.Entity("TheBlogAPI.Models.Entities.Post", b =>
+            modelBuilder.Entity("TheBlogAPI.Models.Entities.VocabSet", b =>
                 {
-                    b.HasOne("TheBlogAPI.Models.Entities.User", "Author")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nickname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Times")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("VocabSet");
+                });
+
+            modelBuilder.Entity("TheBlogAPI.Models.Entities.Article", b =>
+                {
+                    b.HasOne("TheBlogAPI.Models.Entities.Category", "Category")
                         .WithMany()
-                        .HasForeignKey("AuthorId")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Author");
+                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

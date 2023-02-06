@@ -6,13 +6,13 @@ namespace TheBlogAPI.Interface
 {
 	public interface IVocabRepository
 	{
-		ICollection<Vocabulary> GetAll();
-		Vocabulary GetVocabById(Guid Id);
-        ICollection<Vocabulary> GetVocabByWord(string word);
-		ICollection<Vocabulary> GetVocabByCateId(Guid id);
+		ICollection<Vocab> GetAll();
+		Vocab GetVocabById(Guid Id);
+        ICollection<Vocab> GetVocabByWord(string word);
+		ICollection<Vocab> GetVocabBySetId(Guid id);
 		ICollection<QuizDTO> GetQuiz();
-		bool CreateVocab(AddVocabDTO createVocabRequest);
-		bool UpdateVocab(Vocabulary vocab, EditVocabDTO updateVocabRequest);
+		bool CreateVocab(CreateVocabDTO createVocabRequest);
+		bool UpdateVocab(Vocab vocab, UpdateVocabDTO updateVocabRequest);
 		bool DeleteVocab(Guid vocabId);
     }
 }

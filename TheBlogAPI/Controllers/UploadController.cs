@@ -1,8 +1,11 @@
 ﻿using System;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TheBlogAPI.Controllers
 {
+    [EnableCors("CorsPolicy")]
     [ApiController]
     [Route("api/[controller]")]
     public class UploadController:ControllerBase
@@ -27,7 +30,10 @@ namespace TheBlogAPI.Controllers
                     file.CopyTo(stream);
                 }
             }
-            return Ok("Successful!");
+            return Ok(new
+            {
+                file_name =  files[0].FileName,
+            });
 
 
         }
