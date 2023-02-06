@@ -17,81 +17,81 @@ namespace TheBlogAPI.Repository
             _dbcontext = dbcontext;
 		}
 
-        public ICollection<Vocabulary> GetAll()
+        public ICollection<Vocab> GetAll()
         {
-            return _dbcontext.Vocabulary.OrderBy(v => v.Id).ToList();
+            return _dbcontext.Vocab.OrderBy(v => v.Id).ToList();
         }
 
-        public Vocabulary GetVocabById(Guid id)
+        public Vocab GetVocabById(Guid id)
         {
-            return _dbcontext.Vocabulary.FirstOrDefault(v => v.Id == id);
+            return _dbcontext.Vocab.FirstOrDefault(v => v.Id == id);
         }
 
-        public ICollection<Vocabulary> GetVocabByWord(string word)
+        public ICollection<Vocab> GetVocabByWord(string word)
         {
-            return _dbcontext.Vocabulary.Where(v => v.Word.Contains(word)).ToList();
+            return _dbcontext.Vocab.Where(v => v.Word.Contains(word)).ToList();
         }
 
-        public bool CreateVocab(AddVocabDTO createVocabRequest)
+        public bool CreateVocab(CreateVocabDTO createVocabDTO)
         {
-            Vocabulary newWord = new Vocabulary();
-            newWord.Word = createVocabRequest.Word.Trim();
-            newWord.VN = createVocabRequest.VN.Trim();
-            newWord.EN = createVocabRequest.EN.Trim();
-            newWord.Example = createVocabRequest.Example.Trim();
-            newWord.CategoryId = createVocabRequest.CategoryId;
-            if (!string.IsNullOrEmpty(createVocabRequest.Image))
+            Vocab newWord = new Vocab();
+            newWord.Word = createVocabDTO.Word.Trim();
+            newWord.VN = createVocabDTO.VN.Trim();
+            newWord.EN = createVocabDTO.EN.Trim();
+            newWord.Example = createVocabDTO.Example.Trim();
+            newWord.SetId = createVocabDTO.SetId;
+            if (!string.IsNullOrEmpty(createVocabDTO.Image))
             {
-                newWord.Image = createVocabRequest.Image.Trim();
+                newWord.Image = createVocabDTO.Image.Trim();
             }
-            if (!string.IsNullOrEmpty(createVocabRequest.Sound))
+            if (!string.IsNullOrEmpty(createVocabDTO.Sound))
             {
-                newWord.Sound = createVocabRequest.Sound.Trim();
+                newWord.Sound = createVocabDTO.Sound.Trim();
             }
-            if (!string.IsNullOrEmpty(createVocabRequest.Pronunciation))
+            if (!string.IsNullOrEmpty(createVocabDTO.Pronunciation))
             {
-                newWord.Pronunciation = createVocabRequest.Pronunciation.Trim();
+                newWord.Pronunciation = createVocabDTO.Pronunciation.Trim();
             }
             newWord.Id = Guid.NewGuid();
-            _dbcontext.Vocabulary.Add(newWord);
+            _dbcontext.Vocab.Add(newWord);
             var check = _dbcontext.SaveChanges();
             if (check == 0) return false;
             return true;
         }
 
-        public bool UpdateVocab(Vocabulary vocab, EditVocabDTO updateVocabRequest)
+        public bool UpdateVocab(Vocab vocab, UpdateVocabDTO updateVocabDTO)
         {
-            if (!string.IsNullOrEmpty(updateVocabRequest.Word))
+            if (!string.IsNullOrEmpty(updateVocabDTO.Word))
             {
-                vocab.Word = updateVocabRequest.Word.Trim();
+                vocab.Word = updateVocabDTO.Word.Trim();
             }
-            if(!string.IsNullOrEmpty(updateVocabRequest.EN))
+            if(!string.IsNullOrEmpty(updateVocabDTO.EN))
             {
-                vocab.EN = updateVocabRequest.EN.Trim();
+                vocab.EN = updateVocabDTO.EN.Trim();
             }
-            if (!string.IsNullOrEmpty(updateVocabRequest.VN))
+            if (!string.IsNullOrEmpty(updateVocabDTO.VN))
             {
-                vocab.VN = updateVocabRequest.VN.Trim();
+                vocab.VN = updateVocabDTO.VN.Trim();
             }
-            if (!string.IsNullOrEmpty(updateVocabRequest.Example))
-            {
-                vocab.Example = updateVocabRequest.Example.Trim();
+            if (!string.IsNullOrEmpty(updateVocabDTO.Example))
+            {   
+                vocab.Example = updateVocabDTO.Example.Trim();
             }
-            if (!string.IsNullOrEmpty(updateVocabRequest.Pronunciation))
+            if (!string.IsNullOrEmpty(updateVocabDTO.Pronunciation))
             {
-                vocab.Pronunciation = updateVocabRequest.Pronunciation.Trim();
+                vocab.Pronunciation = updateVocabDTO.Pronunciation.Trim();
             }
-            if (!string.IsNullOrEmpty(updateVocabRequest.Image))
+            if (!string.IsNullOrEmpty(updateVocabDTO.Image))
             {
-                vocab.Image = updateVocabRequest.Image.Trim();
+                vocab.Image = updateVocabDTO.Image.Trim();
             }
-            if (!string.IsNullOrEmpty(updateVocabRequest.Sound))
+            if (!string.IsNullOrEmpty(updateVocabDTO.Sound))
             {
-                vocab.Sound = updateVocabRequest.Sound.Trim();
+                vocab.Sound = updateVocabDTO.Sound.Trim();
             }
-            if (updateVocabRequest.CategoryId != Guid.Empty && updateVocabRequest.CategoryId != null)
+            if (updateVocabDTO.SetId != Guid.Empty && updateVocabDTO.SetId != null)
             {
-                vocab.CategoryId = (Guid)updateVocabRequest.CategoryId;
+                vocab.SetId = (Guid)updateVocabDTO.SetId;
             }
             var check = _dbcontext.SaveChanges();
             return check != 0 ? true : false;
@@ -99,17 +99,17 @@ namespace TheBlogAPI.Repository
 
         public bool DeleteVocab(Guid vocabId)
         {
-            var existingVocab = _dbcontext.Vocabulary.Find(vocabId);
+            var existingVocab = _dbcontext.Vocab.Find(vocabId);
 
             if (existingVocab == null) return false;
-            _dbcontext.Vocabulary.Remove(existingVocab);
+            _dbcontext.Vocab.Remove(existingVocab);
             var check = _dbcontext.SaveChanges();
             return check != 0 ? true : false;
         }
 
-        public ICollection<Vocabulary> GetVocabByCateId(Guid id)
+        public ICollection<Vocab> GetVocabBySetId(Guid id)
         {
-            return _dbcontext.Vocabulary.Where(v => v.CategoryId == id).ToList();
+            return _dbcontext.Vocab.Where(v => v.SetId == id).ToList();
         }
 
         public List<string> Shuffle(List<string> list)
@@ -131,10 +131,10 @@ namespace TheBlogAPI.Repository
         {
             Random rnd = new Random();
             List<QuizDTO> quizzes = new List<QuizDTO>();
-            List<Vocabulary> vocabularies = _dbcontext.Vocabulary.ToList();
+            List<Vocab> vocabularies = _dbcontext.Vocab.ToList();
             vocabularies = vocabularies.OrderBy(x => rnd.Next()).Take(80).ToList();
-            List<Vocabulary> selectedWords = vocabularies.Take(20).ToList();
-            List<Vocabulary> ansWords = vocabularies.GetRange(19, 60).ToList();
+            List<Vocab> selectedWords = vocabularies.Take(20).ToList();
+            List<Vocab> ansWords = vocabularies.GetRange(19, 60).ToList();
 
             List<string> quizType = new List<string>()
             {

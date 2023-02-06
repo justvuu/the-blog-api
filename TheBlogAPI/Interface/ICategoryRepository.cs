@@ -7,9 +7,11 @@ namespace TheBlogAPI.Interface
 	public interface ICategoryRepository
 	{
 		ICollection<Category> GetAll();
-		bool AddCategory(AddCategoryDTO addCategoryDTO);
-		bool EditCategory(EditCategoryDTO editCategoryDTO);
-		bool DeleteCategory(Guid id);
+		bool CreateCategory(CreateCategoryDTO createCategoryDTO);
+		bool UpdateCategory(Guid id, UpdateCategoryDTO updateCategoryDTO);
+		Category GetCategoryById(Guid id);
+        Category GetCategoryBySlug(string slug);
+        bool DeleteCategory(Guid id);
 	}
 }
 
