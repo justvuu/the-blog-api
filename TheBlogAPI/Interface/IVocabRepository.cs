@@ -13,7 +13,10 @@ namespace TheBlogAPI.Interface
 		ICollection<QuizDTO> GetQuiz();
 		bool CreateVocab(CreateVocabDTO createVocabRequest);
 		bool UpdateVocab(Vocab vocab, UpdateVocabDTO updateVocabRequest);
+		bool UpdateLevel(Guid id);
 		bool DeleteVocab(Guid vocabId);
+		DateTime GetEarliestRemindTime();
+		ICollection<Vocab> GetByRemindTime();
     }
 }
 

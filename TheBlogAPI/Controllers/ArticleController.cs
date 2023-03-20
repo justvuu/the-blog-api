@@ -25,6 +25,14 @@ namespace TheBlogAPI.Controllers
 
         [HttpPost("get-articles")]
         [AllowAnonymous]
+        public IActionResult GetAllVisible([FromBody] PageParameters parameters)
+        {
+            var articles = service.GetAllVisible(parameters.PageIndex, parameters.PageSize);
+            return Ok(articles);
+        }
+
+        [HttpPost("get-all")]
+        [AllowAnonymous]
         public IActionResult GetAll([FromBody] PageParameters parameters)
         {
             var articles = service.GetAll(parameters.PageIndex, parameters.PageSize);

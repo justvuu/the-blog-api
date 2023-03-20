@@ -6,7 +6,7 @@ namespace TheBlogAPI.Interface
 {
 	public interface IVocabSetRepository
 	{
-		ICollection<VocabSet> GetAll();
+        ICollection<VocabSet> GetAll(int pageIndex, int pageSize);
 		VocabSet GetVocabSetById(Guid id);
         VocabSet GetVocabSetByNickname(string nickname);
 		bool CreateVocabSet(CreateVocabSetDTO createVocabSetDTO);

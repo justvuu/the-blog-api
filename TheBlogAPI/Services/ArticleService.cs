@@ -18,9 +18,14 @@ namespace TheBlogAPI.Services
 			repository = new ArticleRepository(dbContext);
         }
 
+        public ICollection<Article> GetAllVisible(int pageIndex, int pageSize)
+        {
+			return repository.GetAllVisible(pageIndex, pageSize);
+        }
+
         public ICollection<Article> GetAll(int pageIndex, int pageSize)
         {
-			return repository.GetAll(pageIndex, pageSize);
+            return repository.GetAll(pageIndex, pageSize);
         }
 
         public ICollection<ArticleSearchDTO> Search(string word) {

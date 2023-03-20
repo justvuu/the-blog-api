@@ -15,7 +15,6 @@ namespace TheBlogAPI.Controllers
     [EnableCors("CorsPolicy")]
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class VocabController : Controller
 	{
         private readonly TheBlogDbContext dbContext;
@@ -80,6 +79,34 @@ namespace TheBlogAPI.Controllers
             return NotFound("Do not exist !");
         }
 
+        [HttpGet("get-remind-time")]
+        public IActionResult GetEarliestRemindTime()
+        {
+            DateTime remindTime = service.GetEarliestRemindTime();
+            if (remindTime != null) return Ok(remindTime);
+            return NotFound("Do not exist !");
+        }
+
+        //public class RemineObject {
+        //   public DateTime RemindTime { get; set; }
+        //}
+
+        //[HttpPost("get-vocab-by-remind-time")]
+        //public IActionResult GetByRemindTime([FromBody] RemineObject remind)
+        //{
+        //    List<Vocab> vocabs = service.GetByRemindTime(remind.RemindTime).ToList();
+        //    if (!ModelState.IsValid) return BadRequest();
+        //    return Ok(vocabs);
+        //}
+
+        [HttpGet("get-vocab-by-remind-time")]
+        public IActionResult GetByRemindTime()
+        {
+            List<Vocab> vocabs = service.GetByRemindTime().ToList();
+            if (!ModelState.IsValid) return BadRequest();
+            return Ok(vocabs);
+        }
+
         [HttpPost]
         [Authorize]
         [ProducesResponseType(204)]
@@ -110,7 +137,19 @@ namespace TheBlogAPI.Controllers
             var check = service.UpdateVocab(vocab, updateVocabDTO);
             if (!check)
             {
-                ModelState.AddModelError("", "Something went wrong updating category");
+                ModelState.AddModelError("", "Something went wrong updating vocabulary");
+                return StatusCode(500, ModelState);
+            }
+            return Ok("Successfull");
+        }
+
+        [HttpPut("update-level/{vocabId}")]
+        public IActionResult UpdateLevel(Guid vocabId)
+        {
+            bool check = service.UpdateLevel(vocabId);
+            if (!check)
+            {
+                ModelState.AddModelError("", "Something went wrong updating level");
                 return StatusCode(500, ModelState);
             }
             return NoContent();

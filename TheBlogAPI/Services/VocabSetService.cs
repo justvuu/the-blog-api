@@ -29,9 +29,9 @@ namespace TheBlogAPI.Services
             return repository.DeleteVocabSet(id);
         }
 
-        public ICollection<VocabSet> GetAll()
+        public ICollection<VocabSet> GetAll(int pageIndex, int pageSize)
         {
-            return repository.GetAll();
+            return repository.GetAll(pageIndex, pageSize);
         }
 
         public VocabSet GetVocabSetById(Guid id)

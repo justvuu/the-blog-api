@@ -19,6 +19,12 @@ namespace TheBlogAPI.Models.Entities
 
 		public string Example { get; set; }
 
+		public int Level { get; set; }
+
+		public DateTime? CreateTime { get; set; }
+
+		public DateTime? RemindTime { get; set; }
+
 		public Guid SetId { get; set; }
 	}
 }

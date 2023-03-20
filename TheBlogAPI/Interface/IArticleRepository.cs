@@ -6,6 +6,7 @@ namespace TheBlogAPI.Interface
 {
 	public interface IArticleRepository
 	{
+		ICollection<Article> GetAllVisible(int pageIndex, int pageSize);
 		ICollection<Article> GetAll(int pageIndex, int pageSize);
         ICollection<ArticleSearchDTO> Search(string word);
 		ICollection<ArticleSearchDTO> GetByCategory(string categorySlug);

@@ -1,15 +1,43 @@
 ﻿<Properties StartupConfiguration="{914DC11F-BBEA-44FD-A619-24EF69E44D66}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheBlogAPI/Repository/VocabRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheBlogAPI/Repository/ArticleRepository.cs">
     <Files>
-      <File FileName="TheBlogAPI/Services/QuizService.cs" Line="40" Column="19" />
-      <File FileName="TheBlogAPI/Controllers/VocabularyController.cs" Line="69" Column="39" />
-      <File FileName="TheBlogAPI/Services/VocabService.cs" Line="56" Column="33" />
-      <File FileName="TheBlogAPI/Interface/IVocabRepository.cs" Line="13" Column="24" />
-      <File FileName="TheBlogAPI/Repository/VocabRepository.cs" Line="164" Column="57" />
-      <File FileName="TheBlogAPI/Models/DTO/QuizDTO.cs" Line="14" Column="39" />
+      <File FileName="TheBlogAPI/Services/QuizService.cs" />
+      <File FileName="TheBlogAPI/Services/VocabService.cs" />
+      <File FileName="TheBlogAPI/Interface/IVocabRepository.cs" />
+      <File FileName="TheBlogAPI/Repository/VocabRepository.cs" Line="184" Column="61" />
+      <File FileName="TheBlogAPI/Models/DTO/QuizDTO.cs" />
+      <File FileName="TheBlogAPI/Data/TheBlogDbContext.cs" />
+      <File FileName="TheBlogAPI/Program.cs" />
+      <File FileName="TheBlogAPI/appsettings.json" />
+      <File FileName="TheBlogAPI/appsettings.Development.json" />
+      <File FileName="TheBlogAPI/Properties/launchSettings.json" />
+      <File FileName="TheBlogAPI/Models/Entities/Vocab.cs" />
+      <File FileName="TheBlogAPI/Models/Entities/Article.cs" />
+      <File FileName="TheBlogAPI/Interface/IArticleRepository.cs" Line="11" Column="39" />
+      <File FileName="TheBlogAPI/Repository/ArticleRepository.cs" Line="41" Column="65" />
+      <File FileName="TheBlogAPI/Controllers/AuthenController.cs" />
+      <File FileName="TheBlogAPI/Controllers/UploadController.cs" />
+      <File FileName="TheBlogAPI/Controllers/VocabController.cs" Line="1" Column="1" />
+      <File FileName="TheBlogAPI/Controllers/CategoryController.cs" />
+      <File FileName="TheBlogAPI/Models/Entities/Category.cs" />
+      <File FileName="TheBlogAPI/Interface/ISubscriberRepository.cs" />
+      <File FileName="TheBlogAPI/Interface/ICategoryRepository.cs" />
+      <File FileName="TheBlogAPI/Models/DTO/CreateSubscriberDTO.cs" />
+      <File FileName="TheBlogAPI/Models/DTO/CreateVocabDTO.cs" />
+      <File FileName="TheBlogAPI/Repository/SubscriberRepository.cs" />
+      <File FileName="TheBlogAPI/Repository/CategoryRepository.cs" />
+      <File FileName="TheBlogAPI/Services/SubscriberService.cs" />
+      <File FileName="TheBlogAPI/Services/CategoryService.cs" />
+      <File FileName="TheBlogAPI/Controllers/SubscriberController.cs" />
+      <File FileName="TheBlogAPI/Repository/VocabSetRepository.cs" />
+      <File FileName="TheBlogAPI/Models/DTO/UpdateVocabDTO.cs" />
+      <File FileName="TheBlogAPI/Controllers/VocabSetController.cs" />
+      <File FileName="TheBlogAPI/Controllers/ArticleController.cs" Line="68" Column="40" />
+      <File FileName="TheBlogAPI/Models/DTO/PageParameters.cs" />
+      <File FileName="TheBlogAPI/Services/ArticleService.cs" Line="32" Column="34" />
+      <File FileName="TheBlogAPI/Interface/IVocabSetRepository.cs" />
+      <File FileName="TheBlogAPI/Services/VocabSetService.cs" />
+      <File FileName="TheBlogAPI/Models/DTO/CreateArticleDTO.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,20 +45,21 @@
           <Node name="TheBlogAPI" expanded="True">
             <Node name="TheBlogAPI" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
               <Node name="Interface" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="DTO" expanded="True" />
+                <Node name="Entities" expanded="True" />
               </Node>
               <Node name="Properties" expanded="True" />
-              <Node name="Repository" expanded="True" />
+              <Node name="Repository" expanded="True">
+                <Node name="ArticleRepository.cs" selected="True" />
+              </Node>
               <Node name="Services" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
@@ -38,4 +67,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
 </Properties>

@@ -40,6 +40,7 @@ namespace TheBlogAPI.Repository
             newWord.EN = createVocabDTO.EN.Trim();
             newWord.Example = createVocabDTO.Example.Trim();
             newWord.SetId = createVocabDTO.SetId;
+            newWord.Level = createVocabDTO.Level;
             if (!string.IsNullOrEmpty(createVocabDTO.Image))
             {
                 newWord.Image = createVocabDTO.Image.Trim();
@@ -53,10 +54,59 @@ namespace TheBlogAPI.Repository
                 newWord.Pronunciation = createVocabDTO.Pronunciation.Trim();
             }
             newWord.Id = Guid.NewGuid();
+            newWord.CreateTime = DateTime.Now;
+            newWord.Level = 0;
             _dbcontext.Vocab.Add(newWord);
             var check = _dbcontext.SaveChanges();
             if (check == 0) return false;
             return true;
+        }
+
+        public bool UpdateLevel(Guid id) {
+            Vocab vocab = _dbcontext.Vocab.FirstOrDefault(c => c.Id == id);
+            if (vocab == null) return false;
+            int level = vocab.Level;
+            if (level == 0)
+            {
+                vocab.CreateTime = DateTime.Now;
+            }
+            else if (level == 1)
+            {
+                vocab.RemindTime = vocab.CreateTime?.AddMinutes(20);
+            }
+            else if (level == 2)
+            {
+                vocab.RemindTime = vocab.CreateTime?.AddHours(9);
+            }
+            else if (level == 3)
+            {
+                vocab.RemindTime = vocab.CreateTime?.AddDays(1);
+            }
+            else if (level == 4)
+            {
+                vocab.RemindTime = vocab.CreateTime?.AddDays(7);
+            }
+            else if (level == 5)
+            {
+                vocab.RemindTime = vocab.CreateTime?.AddDays(21);
+            }
+            else if (level == 6)
+            {
+                vocab.RemindTime = vocab.CreateTime?.AddMonths(2);
+            }
+            else if (level == 7)
+            {
+                vocab.RemindTime = vocab.CreateTime?.AddMonths(3);
+            }
+            else if (level == 8)
+            {
+                vocab.RemindTime = vocab.CreateTime?.AddMonths(5);
+            }
+            vocab.Level = level + 1;
+
+            var check = _dbcontext.SaveChanges();
+            return check != 0 ? true : false;
+
         }
 
         public bool UpdateVocab(Vocab vocab, UpdateVocabDTO updateVocabDTO)
@@ -93,6 +143,53 @@ namespace TheBlogAPI.Repository
             {
                 vocab.SetId = (Guid)updateVocabDTO.SetId;
             }
+            if (!string.IsNullOrEmpty(updateVocabDTO.RemindTime))
+            {
+                int level = (int)updateVocabDTO.Level;
+                if (level == 1) {
+                    vocab.RemindTime = DateTime.Parse(updateVocabDTO.RemindTime).AddMinutes(10);
+                }
+                if (level == 2)
+                {
+                    vocab.RemindTime = DateTime.Parse(updateVocabDTO.RemindTime).AddDays(1);
+                }
+                else if (level == 3)
+                {
+                    vocab.RemindTime = DateTime.Parse(updateVocabDTO.RemindTime).AddDays(6);
+                }
+                else if (level == 4)
+                {
+                    vocab.RemindTime = DateTime.Parse(updateVocabDTO.RemindTime).AddDays(21);
+                }
+                else if (level == 5)
+                {
+                    vocab.RemindTime = DateTime.Parse(updateVocabDTO.RemindTime).AddMonths(1);
+                }
+                vocab.Level = level;
+
+            }
+            else if (updateVocabDTO.Level.HasValue)
+            {
+                int level = (int)updateVocabDTO.Level;
+                if (level == 2)
+                {
+                    vocab.RemindTime = DateTime.Now.AddDays(1);
+                }
+                else if (level == 3)
+                {
+                    vocab.RemindTime = DateTime.Now.AddDays(6);
+                }
+                else if (level == 4)
+                {
+                    vocab.RemindTime = DateTime.Now.AddDays(21);
+                }
+                else if (level == 5) {
+                    vocab.RemindTime = DateTime.Now.AddMonths(1);
+                }
+                vocab.Level = level;
+            }
+
+            
             var check = _dbcontext.SaveChanges();
             return check != 0 ? true : false;
         }
@@ -110,6 +207,19 @@ namespace TheBlogAPI.Repository
         public ICollection<Vocab> GetVocabBySetId(Guid id)
         {
             return _dbcontext.Vocab.Where(v => v.SetId == id).ToList();
+        }
+
+        public DateTime GetEarliestRemindTime() {
+            //Vocab vocab = _dbcontext.Vocab.OrderByDescending(c => c.RemindTime).Take(1).ToList()[0];
+            Vocab vocab = _dbcontext.Vocab.Where(c => c.RemindTime.HasValue).OrderBy(c => c.RemindTime).Take(1).ToList()[0];
+            return (DateTime)vocab.RemindTime;
+        }
+
+        public ICollection<Vocab> GetByRemindTime() {
+            DateTime remindTime = GetEarliestRemindTime();
+            List<Vocab> All = _dbcontext.Vocab.Where(c => c.RemindTime.HasValue).ToList(); 
+            List<Vocab> vocabs = All.Where(c => DateTime.Compare((DateTime)c.RemindTime, remindTime) == 0).ToList();
+            return vocabs;
         }
 
         public List<string> Shuffle(List<string> list)

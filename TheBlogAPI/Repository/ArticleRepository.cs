@@ -18,6 +18,11 @@ namespace TheBlogAPI.Repository
             _dbcontext = dbcontext;
         }
 
+        public ICollection<Article> GetAllVisible(int pageIndex, int pageSize)
+        {
+            return _dbcontext.Article.Include(c => c.Category).Where(p => p.Visible == true).OrderByDescending(p => p.PublishDate).Skip(pageIndex * pageSize).Take(pageSize).ToList();
+        }
+
         public ICollection<Article> GetAll(int pageIndex, int pageSize)
         {
             return _dbcontext.Article.Include(c => c.Category).OrderByDescending(p => p.PublishDate).Skip(pageIndex * pageSize).Take(pageSize).ToList();
@@ -36,7 +41,7 @@ namespace TheBlogAPI.Repository
         public ICollection<ArticleSearchDTO> Search(string word)
         {
             var articleSearchs = new List<ArticleSearchDTO>();
-            var articles = _dbcontext.Article.Where(a => a.Title.Contains(word)).OrderByDescending(p => p.PublishDate).ToList();
+            var articles = _dbcontext.Article.Where(a => a.Title.Contains(word) && a.Visible == true).OrderByDescending(p => p.PublishDate).ToList();
             foreach (var article in articles)
             {
                 var articleSearch = new ArticleSearchDTO
@@ -142,8 +147,6 @@ namespace TheBlogAPI.Repository
             if (check != 0) return true;
             return false;
         }
-
-       
     }
 }
 

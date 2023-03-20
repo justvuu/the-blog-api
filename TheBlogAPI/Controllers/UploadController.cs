@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TheBlogAPI.Controllers
 {
-    [EnableCors("CorsPolicy")]
+    
     [ApiController]
     [Route("api/[controller]")]
     public class UploadController:ControllerBase
@@ -16,8 +16,10 @@ namespace TheBlogAPI.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
+        
         [HttpPost]
-        public IActionResult UploadFiles(IFormCollection data)
+        [DisableRequestSizeLimit]
+        public IActionResult UploadFiles([FromForm] IFormCollection data)
         {
             List<IFormFile> files = (List<IFormFile>)data.Files;
             if (files.Count == 0) return BadRequest();

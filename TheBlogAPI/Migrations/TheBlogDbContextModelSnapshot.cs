@@ -17,7 +17,7 @@ namespace TheBlogAPI.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.0")
+                .HasAnnotation("ProductVersion", "6.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -86,6 +86,24 @@ namespace TheBlogAPI.Migrations
                     b.ToTable("Category");
                 });
 
+            modelBuilder.Entity("TheBlogAPI.Models.Entities.Subscriber", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Subscriber");
+                });
+
             modelBuilder.Entity("TheBlogAPI.Models.Entities.Vocab", b =>
                 {
                     b.Property<Guid>("Id")
@@ -103,8 +121,17 @@ namespace TheBlogAPI.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Level")
+                        .HasColumnType("int");
+
                     b.Property<string>("Pronunciation")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("RemindTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("ReviewSetId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("SetId")
                         .HasColumnType("uniqueidentifier");

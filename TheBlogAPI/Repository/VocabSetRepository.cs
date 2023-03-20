@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 using TheBlogAPI.Data;
 using TheBlogAPI.Interface;
 using TheBlogAPI.Models.DTO;
@@ -39,9 +40,9 @@ namespace TheBlogAPI.Repository
             return check != 0 ? true : false;
         }
 
-        public ICollection<VocabSet> GetAll()
+        public ICollection<VocabSet> GetAll(int pageIndex, int pageSize)
         {
-            return _dbcontext.VocabSet.OrderByDescending(v => v.CreateTime).ToList();
+            return _dbcontext.VocabSet.OrderByDescending(v => v.CreateTime).Skip(pageIndex * pageSize).Take(pageSize).ToList();
         }
 
         public VocabSet GetVocabSetById(Guid id)

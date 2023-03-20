@@ -14,7 +14,6 @@ namespace TheBlogAPI.Controllers
     [EnableCors("CorsPolicy")]
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class VocabSetController : Controller
 	{
         private readonly TheBlogDbContext dbContext;
@@ -26,12 +25,12 @@ namespace TheBlogAPI.Controllers
             service = new VocabSetService(dbContext);
         }
 
-        [HttpGet]
-        [Authorize]
+        [HttpPost("get-vocab-sets")]
+        //[Authorize]
         [ProducesResponseType(200, Type = typeof(IEnumerable<VocabSet>))]
-        public IActionResult GetVocabSet()
+        public IActionResult GetVocabSet([FromBody] PageParameters parameters)
         {
-            var vocabSets = service.GetAll();
+            var vocabSets = service.GetAll(parameters.PageIndex, parameters.PageSize);
             if (!ModelState.IsValid) return BadRequest();
             return Ok(vocabSets);
         }

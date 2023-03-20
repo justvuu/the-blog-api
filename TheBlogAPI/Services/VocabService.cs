@@ -55,6 +55,18 @@ namespace TheBlogAPI.Services
         {
             return repository.GetQuiz();
         }
+
+        public DateTime GetEarliestRemindTime() {
+            return repository.GetEarliestRemindTime();
+        }
+
+        public ICollection<Vocab> GetByRemindTime() {
+            return repository.GetByRemindTime();
+        }
+
+        public bool UpdateLevel(Guid id) {
+            return repository.UpdateLevel(id);
+        }
     }
 }
 

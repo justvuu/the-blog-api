@@ -33,7 +33,7 @@ namespace TheBlogAPI.Controllers
         {
             if (user != null)
             {
-                if(user.username == "admin" && user.password == "admin")
+                if(user.username == "admin" && user.password == "duongkieutrinh")
                 {
 
                     var token = GenerateToken(user);
@@ -45,7 +45,6 @@ namespace TheBlogAPI.Controllers
                         access_token = token,
                     };
                     string jsonData = JsonConvert.SerializeObject(result);
-
                     JObject jsonObject = JObject.Parse(jsonData);
                     return Ok(result);
                 }
@@ -76,7 +75,7 @@ namespace TheBlogAPI.Controllers
             var token = new JwtSecurityToken(_config["JWT:Issuer"],
              _config["JWT:Audience"],
              claims,
-             expires: DateTime.Now.AddDays(1),
+             expires: DateTime.Now.AddMonths(1),
              signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);

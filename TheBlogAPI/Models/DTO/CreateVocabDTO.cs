@@ -17,6 +17,8 @@ namespace TheBlogAPI.Models.DTO
 
         public string Example { get; set; }
 
+        public int Level { get; set; }
+
         public Guid SetId { get; set; }
     }
 }

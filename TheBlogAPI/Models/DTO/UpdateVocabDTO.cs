@@ -3,7 +3,7 @@ namespace TheBlogAPI.Models.DTO
 {
 	public class UpdateVocabDTO
 	{
-        public string Word { get; set; }
+        public string? Word { get; set; }
 
         public string? VN { get; set; }
 
@@ -16,6 +16,10 @@ namespace TheBlogAPI.Models.DTO
         public string? Image { get; set; }
 
         public string? Example { get; set; }
+
+        public int? Level { get; set; }
+
+        public string? RemindTime { get; set; }
 
         public Guid? SetId { get; set; }
     }

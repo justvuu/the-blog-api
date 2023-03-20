@@ -1,71 +1,143 @@
 {
   "Files": [
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\credentials.json",
-      "PackagePath": "staticwebassets\\credentials.json"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
     },
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\images\\Banner.jpeg",
-      "PackagePath": "staticwebassets\\images\\Banner.jpeg"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/credentials.json",
+      "PackagePath": "staticwebassets/credentials.json"
     },
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\images\\DEE7BD95-5C4E-499A-AEEC-A731AB142070.jpg",
-      "PackagePath": "staticwebassets\\images\\DEE7BD95-5C4E-499A-AEEC-A731AB142070.jpg"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/1-768x576.jpeg",
+      "PackagePath": "staticwebassets/images/1-768x576.jpeg"
     },
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\images\\FEBB8849-73EC-4792-81D7-301FEC7A91F5.jpg",
-      "PackagePath": "staticwebassets\\images\\FEBB8849-73EC-4792-81D7-301FEC7A91F5.jpg"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/192472537_2915681698713968_4932830562111720420_n.jpg",
+      "PackagePath": "staticwebassets/images/192472537_2915681698713968_4932830562111720420_n.jpg"
     },
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\images\\PXL_20220407_085258114.PORTRAIT.jpg",
-      "PackagePath": "staticwebassets\\images\\PXL_20220407_085258114.PORTRAIT.jpg"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/2-6654.jpg",
+      "PackagePath": "staticwebassets/images/2-6654.jpg"
     },
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\images\\_.jpeg",
-      "PackagePath": "staticwebassets\\images\\_.jpeg"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/23DC8D72-5629-4BB0-AC85-BB19A1B5213F.JPG",
+      "PackagePath": "staticwebassets/images/23DC8D72-5629-4BB0-AC85-BB19A1B5213F.JPG"
     },
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\images\\avatar.jpg",
-      "PackagePath": "staticwebassets\\images\\avatar.jpg"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/283119264_3173976812884454_6660995992166608339_n.jpg",
+      "PackagePath": "staticwebassets/images/283119264_3173976812884454_6660995992166608339_n.jpg"
     },
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\images\\image1.jpeg",
-      "PackagePath": "staticwebassets\\images\\image1.jpeg"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/283178164_3173908772891258_4862285273842391274_n.jpg",
+      "PackagePath": "staticwebassets/images/283178164_3173908772891258_4862285273842391274_n.jpg"
     },
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\images\\photo1666280404 (3).jpeg",
-      "PackagePath": "staticwebassets\\images\\photo1666280404 (3).jpeg"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/314726616_1587019105062974_3521199208287641326_n.jpg",
+      "PackagePath": "staticwebassets/images/314726616_1587019105062974_3521199208287641326_n.jpg"
     },
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\images\\photo1666594091.jpeg",
-      "PackagePath": "staticwebassets\\images\\photo1666594091.jpeg"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/8206C169-8B3E-41C2-AC62-FAC2C714D53F.JPG",
+      "PackagePath": "staticwebassets/images/8206C169-8B3E-41C2-AC62-FAC2C714D53F.JPG"
     },
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\images\\z3813391456915_89f7ba10f0e6b9c6e998105cc53bc091.jpg",
-      "PackagePath": "staticwebassets\\images\\z3813391456915_89f7ba10f0e6b9c6e998105cc53bc091.jpg"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/Banner.jpeg",
+      "PackagePath": "staticwebassets/images/Banner.jpeg"
     },
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\images\\z3813391456917_9972c70586da8b3fd7b2f1211e6c56f5.jpg",
-      "PackagePath": "staticwebassets\\images\\z3813391456917_9972c70586da8b3fd7b2f1211e6c56f5.jpg"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/DEE7BD95-5C4E-499A-AEEC-A731AB142070.jpg",
+      "PackagePath": "staticwebassets/images/DEE7BD95-5C4E-499A-AEEC-A731AB142070.jpg"
     },
     {
-      "Id": "D:\\VU\\the-blog-api\\TheBlogAPI\\wwwroot\\images\\z3813391465286_3cb45dc83c11c6e9fa76976ddfe93a08.jpg",
-      "PackagePath": "staticwebassets\\images\\z3813391465286_3cb45dc83c11c6e9fa76976ddfe93a08.jpg"
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/FEBB8849-73EC-4792-81D7-301FEC7A91F5.jpg",
+      "PackagePath": "staticwebassets/images/FEBB8849-73EC-4792-81D7-301FEC7A91F5.jpg"
     },
     {
-      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.TheBlogAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/IMG_3922.JPG",
+      "PackagePath": "staticwebassets/images/IMG_3922.JPG"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/PXL_20220407_085258114.PORTRAIT.jpg",
+      "PackagePath": "staticwebassets/images/PXL_20220407_085258114.PORTRAIT.jpg"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/Screenshot 2023-02-06 at 15.24.44.png",
+      "PackagePath": "staticwebassets/images/Screenshot 2023-02-06 at 15.24.44.png"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/Screenshot 2023-02-11 at 21.20.21.png",
+      "PackagePath": "staticwebassets/images/Screenshot 2023-02-11 at 21.20.21.png"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/_.jpeg",
+      "PackagePath": "staticwebassets/images/_.jpeg"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/anh-9.jpg",
+      "PackagePath": "staticwebassets/images/anh-9.jpg"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/avatar.jpg",
+      "PackagePath": "staticwebassets/images/avatar.jpg"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/base-64-image.png",
+      "PackagePath": "staticwebassets/images/base-64-image.png"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/image1.jpeg",
+      "PackagePath": "staticwebassets/images/image1.jpeg"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/informatic_oylmpiad.JPG",
+      "PackagePath": "staticwebassets/images/informatic_oylmpiad.JPG"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/jodit-logo.png",
+      "PackagePath": "staticwebassets/images/jodit-logo.png"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/math_olympiad.JPG",
+      "PackagePath": "staticwebassets/images/math_olympiad.JPG"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/my_logo.png",
+      "PackagePath": "staticwebassets/images/my_logo.png"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/personal.png",
+      "PackagePath": "staticwebassets/images/personal.png"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/pexels-moose-photos-1037992.jpg",
+      "PackagePath": "staticwebassets/images/pexels-moose-photos-1037992.jpg"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/photo1666594091.jpeg",
+      "PackagePath": "staticwebassets/images/photo1666594091.jpeg"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/test_1-768x576.jpeg",
+      "PackagePath": "staticwebassets/images/test_1-768x576.jpeg"
+    },
+    {
+      "Id": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/wwwroot/images/♡ Pinterest_ Alondraangel11 ♡.jfif",
+      "PackagePath": "staticwebassets/images/♡ Pinterest_ Alondraangel11 ♡.jfif"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.TheBlogAPI.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.build.TheBlogAPI.props",
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.build.TheBlogAPI.props",
       "PackagePath": "build\\TheBlogAPI.props"
     },
     {
-      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.TheBlogAPI.props",
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.buildMultiTargeting.TheBlogAPI.props",
       "PackagePath": "buildMultiTargeting\\TheBlogAPI.props"
     },
     {
-      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildTransitive.TheBlogAPI.props",
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.buildTransitive.TheBlogAPI.props",
       "PackagePath": "buildTransitive\\TheBlogAPI.props"
     }
   ],

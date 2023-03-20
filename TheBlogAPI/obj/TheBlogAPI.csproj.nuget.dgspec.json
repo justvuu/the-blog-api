@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VU\\the-blog-api\\TheBlogAPI\\TheBlogAPI.csproj": {}
+    "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/TheBlogAPI.csproj": {}
   },
   "projects": {
-    "D:\\VU\\the-blog-api\\TheBlogAPI\\TheBlogAPI.csproj": {
+    "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/TheBlogAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VU\\the-blog-api\\TheBlogAPI\\TheBlogAPI.csproj",
+        "projectUniqueName": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/TheBlogAPI.csproj",
         "projectName": "TheBlogAPI",
-        "projectPath": "D:\\VU\\the-blog-api\\TheBlogAPI\\TheBlogAPI.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\VU\\the-blog-api\\TheBlogAPI\\obj\\",
+        "projectPath": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/TheBlogAPI.csproj",
+        "packagesPath": "/Users/justvu/.nuget/packages/",
+        "outputPath": "/Users/justvu/Documents/Personal/MyBlog/the-blog-api/TheBlogAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/justvu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,6 +42,10 @@
               "target": "Package",
               "version": "[1.58.0.2759, )"
             },
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[7.0.2, )"
@@ -54,7 +56,7 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -98,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

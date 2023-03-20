@@ -15,6 +15,7 @@ namespace TheBlogAPI.Data
         public DbSet<Article> Article { get; set; }
         public DbSet<Category> Category { set; get; }
         public DbSet<VocabSet> VocabSet { get; set; }
+        public DbSet<Subscriber> Subscriber { get; set; }
     }
 }
 
